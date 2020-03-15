@@ -1,20 +1,20 @@
 {
-   "name": "nestjs-sequelize-crud",
+   "name": "nestjs-crud-sequelize",
    "version": "1.0.0",
    "description": "Crud for sequelize",
    "keywords": [
       "crud",
       "sequelize",
       "nests",
-      "nestjs-sequelize-crud"
+      "nestjs-crud-sequelize"
    ],
-   "homepage": "https://github.com/yoicalsin/nestjs-sequelize-crud#readme",
+   "homepage": "https://github.com/yoicalsin/nestjs-crud-sequelize#readme",
    "bugs": {
-      "url": "https://github.com/yoicalsin/nestjs-sequelize-crud/issues"
+      "url": "https://github.com/yoicalsin/nestjs-crud-sequelize/issues"
    },
    "repository": {
       "type": "git",
-      "url": "git+https://github.com/yoicalsin/nestjs-sequelize-crud.git"
+      "url": "git+https://github.com/yoicalsin/nestjs-crud-sequelize.git"
    },
    "license": "MIT",
    "author": "Yoni Calsin <helloyonicb@gmail.com>",
