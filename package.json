@@ -18,6 +18,7 @@
    },
    "license": "MIT",
    "author": "Yoni Calsin <helloyonicb@gmail.com>",
+   "type": "dist/index.d.ts",
    "main": "dist/index.js",
    "directories": {
       "lib": "lib"
