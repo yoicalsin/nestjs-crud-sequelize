@@ -1,0 +1,9 @@
+# Folders
+/.vscode
+/lib
+
+# Files
+.gitignore
+.prettierrc.js
+index.ts
+tsconfig.json
