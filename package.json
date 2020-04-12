@@ -27,9 +27,11 @@
       "prebuild": "rimraf dist",
       "build": "yarn format & yarn prebuild & tsc",
       "dev": "yarn prebuild & tsc -w",
+      "dev:start": "nodemon dist/index.js",
       "format": "prettier --write lib/*.ts package.json"
    },
    "devDependencies": {
+      "nodemon": "^2.0.2",
       "prettier": "^1.19.1",
       "prettier-plugin-packagejson": "^2.0.10",
       "rimraf": "^3.0.2",
