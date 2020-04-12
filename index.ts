@@ -1,4 +1,3 @@
-import { More } from './interfaces/more';
 import {
    ModelCtor,
    Model,
@@ -6,6 +5,11 @@ import {
    BuildOptions,
    UpdateOptions,
 } from 'sequelize/types';
+
+// For object types
+interface More {
+   [key: string]: any;
+}
 
 export class CrudService<T extends any = ModelCtor<Model>> {
    model: ModelCtor<Model<any, any>>;
