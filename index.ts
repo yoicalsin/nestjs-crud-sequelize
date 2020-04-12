@@ -33,6 +33,18 @@ export class CrudService<T extends any = ModelCtor<Model>> {
       return await data.save();
    }
 
+   async updateOrCreate(where: { where: More }, input: More): Promise<T> {
+      let data = undefined;
+      const is = await this.findOne(where);
+
+      if (is) {
+         data = await this.update(input, where, where);
+      } else {
+         data = await this.create(input);
+      }
+      return data;
+   }
+
    async update(
       input: More,
       options: UpdateOptions,
