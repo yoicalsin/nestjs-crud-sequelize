@@ -21,7 +21,7 @@ import { CrudService } from 'nestjs-crud-sequelize';
 import { UserModel } from 'src/models/user';
 
 @Injectable()
-export class UserService extends CrudService<typeof UserModel> {
+export class UserService extends CrudService<UserModel> {
    constructor(
       // Inject your model
       @InjectModel(UserModel)
