@@ -1,6 +1,6 @@
 {
    "name": "nestjs-crud-sequelize",
-   "version": "1.0.0",
+   "version": "1.0.1",
    "description": "Crud for sequelize",
    "keywords": [
       "crud",
@@ -8,18 +8,18 @@
       "nests",
       "nestjs-crud-sequelize"
    ],
-   "homepage": "https://github.com/yoicalsin/nestjs-crud-sequelize#readme",
+   "homepage": "https://github.com/yonicalsin/nestjs-crud-sequelize#readme",
    "bugs": {
-      "url": "https://github.com/yoicalsin/nestjs-crud-sequelize/issues"
+      "url": "https://github.com/yonicalsin/nestjs-crud-sequelize/issues"
    },
    "repository": {
       "type": "git",
-      "url": "git+https://github.com/yoicalsin/nestjs-crud-sequelize.git"
+      "url": "git+https://github.com/yonicalsin/nestjs-crud-sequelize.git"
    },
    "license": "MIT",
    "author": "Yoni Calsin <helloyonicb@gmail.com>",
-   "type": "dist/index.d.ts",
-   "main": "dist/index.js",
+   "type": "index.d.ts",
+   "main": "index.js",
    "directories": {
       "lib": "lib"
    },
@@ -27,12 +27,14 @@
       "prebuild": "rimraf dist",
       "build": "yarn format & yarn prebuild & tsc",
       "dev": "yarn prebuild & tsc -w",
+      "dev:start": "nodemon dist/index.js",
       "format": "prettier --write lib/*.ts package.json"
    },
    "devDependencies": {
-      "prettier": "^1.19.1",
-      "prettier-plugin-packagejson": "^2.0.10",
+      "nodemon": "^2.0.4",
+      "prettier": "^2.0.5",
+      "prettier-plugin-packagejson": "^2.2.5",
       "rimraf": "^3.0.2",
-      "typescript": "^3.8.3"
+      "typescript": "^3.9.5"
    }
 }
