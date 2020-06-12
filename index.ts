@@ -56,7 +56,7 @@ export class CrudService<T extends any = ModelCtor<Model>> {
    }
 
    async delete(options: FindOptions): Promise<T> {
-      const data = await this.findOne(options);
+      const data: any = await this.findOne(options);
       data && (await data.destroy());
       return data;
    }
