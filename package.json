@@ -31,10 +31,10 @@
       "format": "prettier --write lib/*.ts package.json"
    },
    "devDependencies": {
-      "nodemon": "^2.0.2",
-      "prettier": "^1.19.1",
-      "prettier-plugin-packagejson": "^2.0.10",
+      "nodemon": "^2.0.4",
+      "prettier": "^2.0.5",
+      "prettier-plugin-packagejson": "^2.2.5",
       "rimraf": "^3.0.2",
-      "typescript": "^3.8.3"
+      "typescript": "^3.9.5"
    }
 }
