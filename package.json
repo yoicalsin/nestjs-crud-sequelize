@@ -1,6 +1,6 @@
 {
    "name": "nestjs-crud-sequelize",
-   "version": "1.0.1",
+   "version": "1.0.2",
    "description": "Crud for sequelize",
    "keywords": [
       "crud",
