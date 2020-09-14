@@ -4,6 +4,24 @@ class CrudService {
     constructor(model) {
         this.model = model;
     }
+    async paginate(options = {}) {
+        const { page, offset } = Object.assign({ page: 1, offset: 25 }, options);
+        const end = page * offset;
+        const start = end - offset;
+        const data = await this.model.findAndCountAll(Object.assign(Object.assign({}, options), { limit: options.offset, offset: start }));
+        const total = data.count;
+        const totalPages = Math.ceil(total / offset);
+        const next = page + 1 <= totalPages ? page + 1 : null;
+        const prev = page - 1 >= 1 ? page - 1 : null;
+        return {
+            total,
+            page,
+            totalPages,
+            items: data.rows,
+            next,
+            prev,
+        };
+    }
     async findAll(options = {}) {
         const data = (await this.model.findAll(options));
         return data;

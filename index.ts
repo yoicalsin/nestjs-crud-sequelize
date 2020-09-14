@@ -1,21 +1,55 @@
 import {
-   ModelCtor,
-   Model,
-   FindOptions,
    BuildOptions,
+   FindAndCountOptions,
+   FindOptions,
+   Model,
+   ModelCtor,
    UpdateOptions,
 } from 'sequelize/types';
 
-// For object types
-interface More {
-   [key: string]: any;
+interface PaginateOptions extends FindAndCountOptions {
+   page?: number;
+}
+
+interface More<T = any> {
+   [key: string]: T;
 }
 
 export class CrudService<T extends any = ModelCtor<Model>> {
-   model: ModelCtor<Model<any, any>>;
+   model: T & ModelCtor<Model<any, any>>;
 
    constructor(model: any) {
       this.model = model;
+   }
+
+   async paginate(options: PaginateOptions = {}) {
+      const { page, offset } = {
+         page: 1,
+         offset: 25,
+         ...options,
+      };
+      const end = page * offset;
+      const start = end - offset;
+
+      const data = await this.model.findAndCountAll({
+         ...options,
+         limit: options.offset,
+         offset: start,
+      });
+
+      const total = data.count;
+      const totalPages = Math.ceil(total / offset);
+      const next = page + 1 <= totalPages ? page + 1 : null;
+      const prev = page - 1 >= 1 ? page - 1 : null;
+
+      return {
+         total,
+         page,
+         totalPages,
+         items: data.rows,
+         next,
+         prev,
+      };
    }
 
    async findAll(options: FindOptions = {}): Promise<T[]> {

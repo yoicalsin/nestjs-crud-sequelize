@@ -1,10 +1,21 @@
-import { ModelCtor, Model, FindOptions, BuildOptions, UpdateOptions } from 'sequelize/types';
-interface More {
-    [key: string]: any;
+import { BuildOptions, FindAndCountOptions, FindOptions, Model, ModelCtor, UpdateOptions } from 'sequelize/types';
+interface PaginateOptions extends FindAndCountOptions {
+    page?: number;
+}
+interface More<T = any> {
+    [key: string]: T;
 }
 export declare class CrudService<T extends any = ModelCtor<Model>> {
-    model: ModelCtor<Model<any, any>>;
+    model: T & ModelCtor<Model<any, any>>;
     constructor(model: any);
+    paginate(options?: PaginateOptions): Promise<{
+        total: any;
+        page: number;
+        totalPages: number;
+        items: any;
+        next: number;
+        prev: number;
+    }>;
     findAll(options?: FindOptions): Promise<T[]>;
     findOne(options: FindOptions): Promise<T>;
     create(input: More, options?: BuildOptions): Promise<T>;
