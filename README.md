@@ -10,7 +10,7 @@
 <a href="https://github.com/yonycalsin/nestjs-crud-sequelize" target="_blank">
 <img src="https://s3.amazonaws.com/assets.coveralls.io/badges/coveralls_95.svg" alt="Coverage" /></a>
 <a href="https://github.com/yonycalsin/nestjs-crud-sequelize"><img src="https://img.shields.io/badge/Github%20Page-nestjs.crud.sequelize-yellow?style=flat-square&logo=github" /></a>
-<a href="https://github.com/yonycalsin"><img src="https://img.shields.io/badge/Author-Yoni%20Calsin-blueviolet?style=flat-square&logo=appveyor" /></a>
+<a href="https://github.com/yonycalsin"><img src="https://img.shields.io/badge/Author-Yony%20Calsin-blueviolet?style=flat-square&logo=appveyor" /></a>
 <a href="https://twitter.com/yonycalsin" target="_blank">
 <img src="https://img.shields.io/twitter/follow/yonycalsin.svg?style=social&label=Follow"></a>
 

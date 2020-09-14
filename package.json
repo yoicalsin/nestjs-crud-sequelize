@@ -8,13 +8,13 @@
       "nests",
       "nestjs-crud-sequelize"
    ],
-   "homepage": "https://github.com/yonicalsin/nestjs-crud-sequelize#readme",
+   "homepage": "https://github.com/yonycalsin/nestjs-crud-sequelize#readme",
    "bugs": {
-      "url": "https://github.com/yonicalsin/nestjs-crud-sequelize/issues"
+      "url": "https://github.com/yonycalsin/nestjs-crud-sequelize/issues"
    },
    "repository": {
       "type": "git",
-      "url": "git+https://github.com/yonicalsin/nestjs-crud-sequelize.git"
+      "url": "git+https://github.com/yonycalsin/nestjs-crud-sequelize.git"
    },
    "license": "MIT",
    "author": "Yony Calsin",
