@@ -17,7 +17,7 @@
       "url": "git+https://github.com/yonicalsin/nestjs-crud-sequelize.git"
    },
    "license": "MIT",
-   "author": "Yoni Calsin <helloyonicb@gmail.com>",
+   "author": "Yony Calsin",
    "type": "index.d.ts",
    "main": "index.js",
    "directories": {
